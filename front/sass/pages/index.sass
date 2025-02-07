@@ -1,0 +1,305 @@
+$white-bg: #FAFAFA
+$bg-game: #FBFBFB
+$very-light-grey: #EFF1F2
+$light-grey: #E7EAED
+$filter-grey: #E8E8E8
+$switcher-light-grey: #D9D9D9
+$placeholder-grey: #A1A1A1
+$revue-grey: #EFF1F2
+$play-grey: #EBEBF2
+$grey: #545864
+$switcher-grey: #4B5563
+$cold-grey: #374151
+$gray-blue: #1F344C
+$blue: #005
+$dark-blue: #00003D
+$black: #121212
+$real-black: #000
+
+
+$font-robotoSemi-bold: Roboto-SemiBold, sans-serif //600
+$font-roboto-medium: Roboto-Medium, sans-serif //500
+$font-roboto-regular: Roboto-Regular, sans-serif //400
+
+body
+  overscroll-behavior: none
+  -webkit-tap-highlight-color: transparent
+  background: $white-bg
+  img
+    max-width: 100%
+    height: auto
+
+.selectedGame
+  position: relative
+  width: 100%
+  -webkit-tap-highlight-color: transparent
+  overscroll-behavior: none
+  background: $white-bg
+  overflow: hidden
+  .main
+    display: flex
+    flex-direction: column
+    width: 1336px
+    position: relative
+    margin: 75px auto 54px
+  .breadcrumbs
+    display: flex
+    justify-content: flex-start
+    margin-bottom: 25px
+    &__item
+      font-family: $font-roboto-regular
+      font-size: 16px
+      color: $placeholder-grey
+      margin: 0 16px
+      position: relative
+      &:first-child
+        margin-left: 0
+      &:last-child
+        font-family: $font-roboto-medium
+        color: $black
+        cursor: auto
+        pointer-events: none
+      &:not(:last-child)
+        &::after
+          content: url('../img/arrow-right-icon.svg')
+          position: absolute
+          width: 8px
+          height: 19px
+          right: -21px
+          bottom: 0
+          z-index: 2
+          cursor: auto
+          pointer-events: none
+  .topGames
+    display: flex
+    padding: 0 25px
+    margin-bottom: 48px
+    justify-content: space-between
+  .mainGame
+    background-color: $bg-game
+    display: flex
+    align-items: center
+    flex-direction: column
+    width: 990px
+    border-radius: 16px
+    padding: 16px 18px 103px 21px
+    box-shadow: -8px -8px 8px 0px rgba(222, 222, 222, 0.25), 8px 8px 8px 0px rgba(222, 222, 222, 0.25)
+    &__top
+      display: flex
+      justify-content: center
+      align-items: center
+      position: relative
+      width: 100%
+      &-img
+        width: 100%
+        height: auto
+        max-height: 488px
+        min-height: 488px
+        align-self: stretch
+        overflow: hidden
+        img
+          width: 100%
+          height: 100%
+          object-fit: cover
+          object-position: center
+          border-radius: 8px
+      &-buttons
+        position: absolute
+        display: flex
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        .game
+          &__btn
+            width: 180px
+            &-demo
+              margin-right: 24px
+    &__info
+      margin-top: 10px
+      width: 100%
+      &-top
+        padding-right: 10px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 10px
+      &-bottom
+        display: flex
+        align-items: center
+      &-feature
+        font-family: $font-roboto-regular
+        font-size: 16px
+        line-height: 17px
+        letter-spacing: -0.06px
+        color: $grey
+      &-value
+        font-size: 16px
+        line-height: 17px
+        font-family: Roboto-Medium, sans-serif
+        color: $blue
+        letter-spacing: -0.06px
+        padding: 4px 8px
+        background-color: $light-grey
+        border-radius: 4px
+        margin-left: 16px
+    &__name
+      font-family: $font-robotoSemi-bold
+      font-size: 32px
+      color: $gray-blue
+      letter-spacing: 0.2px
+    &__icons
+      align-self: flex-end
+      img
+        margin-left: 29px
+        cursor: pointer
+  .sideGame
+    margin-bottom: 16px
+    border-radius: 16px
+    width: 271px
+    padding: 16px 16px 13px 16px
+    background-color: $bg-game
+    box-shadow: -8px -8px 8px 0px rgba(222, 222, 222, 0.25), 8px 8px 8px 0px rgba(222, 222, 222, 0.25)
+    &__img
+      border-radius: 6px
+      width: 100%
+      height: 169px
+      align-self: stretch
+      overflow: hidden
+      margin-bottom: 8px
+      display: flex
+      justify-content: center
+      align-items: center
+      img
+        width: 100%
+        height: 100%
+        transition: transform 0.3s ease
+        object-fit: cover
+        object-position: center
+        border-radius: 6px
+      &:hover
+        img
+          transform: scale(1.05)
+    &__info
+      &-name
+        text-align: center
+        font-family: $font-roboto-medium
+        font-size: 20px
+        line-height: 26px
+        letter-spacing: 0.2px
+        color: $gray-blue
+        margin-bottom: 23px
+      &-buttons
+        width: 87%
+        margin: 0 auto
+        .game
+          &__btn
+            width: 100%
+            margin-bottom: 8px
+  .popularGames
+    display: flex
+    flex-direction: column
+    &__title
+      font-family: $font-roboto-medium
+      font-size: 40px
+      letter-spacing: 1px
+      color: $real-black
+      font-weight: normal
+      margin-bottom: 20px
+    &__allGames
+      display: flex
+      flex-wrap: wrap
+      justify-content: flex-start
+    .game
+      width: 314px
+      height: 481px
+      padding: 16px 12px
+      box-shadow: -8px 8px 8px 0px rgba(222, 222, 222, 0.25), 8px 8px 8px 0px rgba(222, 222, 222, 0.25)
+      display: flex
+      flex-direction: column
+      margin-right: 26px
+      margin-bottom: 24px
+      &:nth-child(4n)
+        margin-right: 0
+      &__top
+        border-radius: 8px
+        width: 100%
+        height: auto
+        max-height: 226px
+        min-height: 226px
+        align-self: stretch
+        overflow: hidden
+        margin-bottom: 16px
+        display: flex
+        justify-content: center
+        align-items: center
+        img
+          width: 100%
+          height: 100%
+          transition: transform 0.3s ease
+          object-fit: cover
+          object-position: center
+        &:hover
+          img
+            transform: scale(1.05)
+      &__center
+        &-name
+          font-family: $font-roboto-medium
+          font-size: 20px
+          color: $gray-blue
+          line-height: 26px
+          letter-spacing: 0.2px
+        &-info
+          font-family: $font-roboto-regular
+          font-size: 16px
+          line-height: 17px
+          letter-spacing: -0.06px
+          color: $grey
+          display: flex
+          align-items: center
+          &:first-child
+            margin-top: 12px
+          &:not(:last-child)
+            margin-bottom: 8px
+          .imp-value
+            font-size: 16px
+            line-height: 17px
+            font-family: $font-roboto-medium
+            color: $blue
+            letter-spacing: -0.06px
+            padding: 4px 8px
+            background-color: $light-grey
+            border-radius: 4px
+            margin-left: 16px
+        &-value
+          font-family: $font-robotoSemi-bold
+          color: $grey
+          letter-spacing: -0.06px
+          margin-left: 9px
+      &__buttons
+        display: flex
+        justify-content: space-between
+        margin-top: auto
+  .game__btn
+    background-color: $revue-grey
+    width: 140px
+    height: 44px
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-shrink: 0
+    font-family: $font-robotoSemi-bold
+    font-size: 16px
+    letter-spacing: -0.06px
+    line-height: 17px
+    color: $dark-blue
+    border-radius: 4px
+    transition: 0.2s ease
+    &:hover
+      background-color: $grey
+      color: $light-grey
+    &-play
+      background-color: $black
+      color: $play-grey
+      &:hover
+        background-color: $grey
+        color: $light-grey

@@ -1,0 +1,165 @@
+@media screen and (max-width: 1400px)
+  .selectedGame
+    .main
+      width: 1010px
+    .topGames
+      padding: 0
+    .mainGame
+      width: 772px
+    .sideGame
+      width: 225px
+    .popularGames
+      .game
+        margin-right: 34px
+        &:nth-child(4n)
+          margin-right: 34px
+        &:nth-child(3n)
+          margin-right: 0
+
+@media screen and (max-width: 1090px)
+  .selectedGame
+    .main
+      width: 608px
+      margin-top: 40px
+      margin-bottom: 37px
+    .topGames
+      display: flex
+      flex-direction: column
+      margin-bottom: 60px
+      &__right
+        display: flex
+        justify-content: space-between
+    .mainGame
+      width: 608px
+      padding: 16px 16px 100px 16px
+      margin-bottom: 24px
+      &__top
+        &-img
+          max-height: 392px
+          min-height: 392px
+        &-buttons
+          top: 135%
+          left: 38%
+          .game__btn
+            width: 200px
+            margin-right: 16px
+    .sideGame
+      width: 290px
+      padding: 19px 16px
+      position: relative
+      &__img
+        margin-bottom: 12px
+        &:hover
+          img
+            transform: none
+      &__info
+        &-name
+          margin-bottom: 0
+        &-buttons
+          position: absolute
+          top: 24%
+          left: 14%
+          width: 208px
+    .popularGames
+      .game
+        box-shadow: -8px -8px 8px 0px rgba(222, 222, 222, 0.25), 8px 8px 8px 0px rgba(222, 222, 222, 0.25)
+        border-radius: 16px
+        height: 509px
+        width: 292px
+        margin-right: 24px
+        padding: 16px 16px 22px 16px
+        &:nth-child(3n)
+          margin-right: 24px
+        &:nth-child(2n)
+          margin-right: 0
+        &:nth-child(n+7)
+          display: none
+        &__top
+          max-height: 226px
+          min-height: 226px
+        &__center
+          &-info
+            font-size: 14px
+        &__buttons
+          flex-direction: column
+          width: 100%
+      .game
+        &__btn
+          width: 100%
+          &-info
+            margin-bottom: 12px
+
+@media screen and (max-width: 645px)
+  .selectedGame
+    .main
+      width: 353px
+      margin-top: 26px
+      margin-bottom: 140px
+    .topGames
+      margin-bottom: 30px
+      &__right
+        display: none
+    .mainGame
+      width: 353px
+      padding: 16px 16px 169px 16px
+      &__top
+        position: relative
+        &-img
+          max-height: 247px
+          min-height: 247px
+        &-buttons
+          flex-direction: column
+          width: 100%
+          left: 50%
+          top: 162%
+          .game
+            &__btn
+              width: 100%
+              margin-bottom: 21px
+      &__icons
+        position: absolute
+        right: 5px
+        top: 13px
+      &__info
+        margin-top: 5px
+        &-top
+          margin-bottom: 5px
+          position: relative
+      &__name
+        font-size: 20px
+        line-height: 26px
+        letter-spacing: 0.2px
+    .popularGames
+      &__title
+        font-size: 32px
+        margin: 0 auto 20px
+      .game
+        width: 100%
+        height: 518px
+        margin-right: 0
+        margin-bottom: 8px
+        &:nth-child(n+5)
+          display: none
+        &:nth-child(3n)
+          margin-right: 0
+        &:nth-child(2n)
+          margin-right: 0
+
+@media screen and (max-width: 374px)
+  .selectedGame
+    .main
+      width: 90%
+    .mainGame
+      width: 100%
+      &__top
+        &-img
+          max-height: 200px
+          min-height: 200px
+        &-buttons
+          top: 178%
+    .popularGames
+      .game
+        height: 496px
+        &__top
+          max-height: 200px
+          min-height: 200px
